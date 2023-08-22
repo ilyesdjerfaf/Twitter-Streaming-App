@@ -6,13 +6,14 @@ import socket
 import json
 
 
-# Set up your credentials
+# Set up your credentials, which are the same keys I told you save from your Twitter App keys, make sure you put them here in the right order
 consumer_key=''
 consumer_secret=''
 access_token =''
 access_secret=''
 
 
+# We will create a class that will listen to the tweets 
 class TweetsListener(StreamListener):
 
   def __init__(self, csocket):
@@ -32,16 +33,17 @@ class TweetsListener(StreamListener):
       print(status)
       return True
 
+# function to set the connection
 def sendData(c_socket):
   auth = OAuthHandler(consumer_key, consumer_secret)
   auth.set_access_token(access_token, access_secret)
 
   twitter_stream = Stream(auth, TweetsListener(c_socket))
-  twitter_stream.filter(track=['soccer'])
+  twitter_stream.filter(track=['messi']) # the topic, you can put anything, but, try to put something relatively popular
 
 if __name__ == "__main__":
   s = socket.socket()         # Create a socket object
-  host = "127.0.0.1"     # Get local machine name
+  host = "127.0.0.1"          # Get local machine name
   port = 5555                 # Reserve a port for your service.
   s.bind((host, port))        # Bind to the port
 
