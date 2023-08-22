@@ -22,4 +22,4 @@ To do all of this :
 
   * pip3 install seaborn : python visualization library
 
-* Our next task is to write a script that will connect to Twitter for streaming, this will be a .py file that we will call later on (you will find it as **TweetRead.py**)
+* Our next task is to write a script that will connect to Twitter for streaming, this will be a .py file that we will call later on ( you will find it as **TweetRead.py** )
