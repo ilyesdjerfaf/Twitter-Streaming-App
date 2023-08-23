@@ -43,3 +43,5 @@ To do all of this :
 * Restart the machine
 
 * Open two terminals, one to start a jupyter notebook to run TwitterStreamingApp.ipynb and the other to run the TweetRead.py by executing this line of cammand : python3 TweetRead.py when you read in the jupiter notebook a note that says : now run TweetRead.py
+
+# <span style='color:blue'> **THANK YOU**</span>
